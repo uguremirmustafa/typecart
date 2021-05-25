@@ -66,8 +66,6 @@ const Home: FC = () => {
   if (isLoading) return <LinearProgress />;
   if (error) return <div>Some error happened but we don't know exactly!</div>;
 
-  console.log(data);
-
   return (
     <div className="home">
       <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
