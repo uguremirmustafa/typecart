@@ -1,0 +1,48 @@
+@use '../abstracts/' as *;
+@use '../base/variables' as *;
+.cartItem {
+  display: grid;
+  grid-template-columns: 10rem 1fr 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  h3 {
+    font-size: 1.1rem;
+    grid-column: span 3;
+  }
+  .information {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    p {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+  }
+  img {
+    height: 80px;
+  }
+}
+@include media($tablet) {
+  .cartItem {
+    grid-template-columns: 1fr;
+    .buttons {
+      grid-column: span 2;
+      width: 100%;
+    }
+  }
+}
+@include media($mobile) {
+  .cartItem {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+@use '../base/variables' as *;
+.cart {
+  width: 700px;
+  @include media($tablet) {
+    width: 500px;
+  }
+  @include media($mobile) {
+    width: 100%;
+  }
+  height: 100%;
+  h2 {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+  .closeButton {
+    margin: 1rem;
+    background-color: pink;
+    color: red;
+  }
+}
